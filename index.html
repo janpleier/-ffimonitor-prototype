@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öffimonitor — Metalab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="location">
+            <span class="location-name">Metalab</span>
+            <span class="location-sub">Rathausstraße 6, 1010 Wien</span>
+        </div>
+        <div class="clock">
+            <span id="clock-time"></span>
+            <span id="clock-date" class="clock-date"></span>
+        </div>
+    </header>
+
+    <main>
+        <ul id="departures" class="departures">
+            <li class="dep tram">
+                <div class="stop-name">Schottentor U</div>
+                
+                <div class="circle"><span class="num">0</span></div>
+                <div class="side">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Pötzleinsdorf <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 7, 13, 20 Minuten</span>
+                </div>
+                
+                <div class="center">
+                    <span class="line-name">41</span>
+                    <span class="walk">Gehzeit ~6 Minuten</span>
+                </div>
+                
+                <div class="side side-right">
+                    <span class="dest">-</span>
+                </div>
+                <div class="circle empty"><span class="num">-</span></div>
+            </li>
+
+            <li class="dep u2">
+                <div class="stop-name">Rathaus</div>
+                
+                <div class="circle"><span class="num">0</span></div>
+                <div class="side">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Karlsplatz <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 4, 7, 11 Minuten</span>
+                </div>
+                
+                <div class="center">
+                    <span class="line-name">U2</span>
+                    <span class="walk">Gehzeit ~3 Minuten</span>
+                </div>
+                
+                <div class="side side-right">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Seestadt <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 2, 7, 11 Minuten</span>
+                </div>
+                <div class="circle"><span class="num">1</span></div>
+            </li>
+
+            <li class="dep u3">
+                <div class="stop-name">Herrengasse</div>
+                
+                <div class="circle"><span class="num">0</span></div>
+                <div class="side">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Simmering <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 2, 6, 8 Minuten</span>
+                </div>
+                
+                <div class="center">
+                    <span class="line-name">U3</span>
+                    <span class="walk">Gehzeit ~7 Minuten</span>
+                </div>
+                
+                <div class="side side-right">
+                    <span class="dest">-</span>
+                </div>
+                <div class="circle empty"><span class="num">-</span></div>
+            </li>
+
+            <li class="dep tram">
+                <div class="stop-name">Landesgerichtsstraße</div>
+                
+                <div class="circle"><span class="num">1</span></div>
+                <div class="side">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Dornbach <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 5, 9, 13 Minuten</span>
+                </div>
+                
+                <div class="center">
+                    <span class="line-name">43</span>
+                    <span class="walk">Gehzeit ~4 Minuten</span>
+                </div>
+                
+                <div class="side side-right">
+                    <span class="dest">-</span>
+                </div>
+                <div class="circle empty"><span class="num">-</span></div>
+            </li>
+
+            <li class="dep tram">
+                <div class="stop-name">Schottentor U</div>
+                
+                <div class="circle"><span class="num">2</span></div>
+                <div class="side">
+                    <span class="label">Nächste Abfahrt nach</span>
+                    <span class="dest">Hohe Warte <span class="badge-icon">♿</span></span>
+                    <span class="next">danach in 12, 22, 32 Minuten</span>
+                </div>
+                
+                <div class="center">
+                    <span class="line-name">37</span>
+                    <span class="walk">Gehzeit ~6 Minuten</span>
+                </div>
+                
+                <div class="side side-right">
+                    <span class="dest">-</span>
+                </div>
+                <div class="circle empty"><span class="num">-</span></div>
+            </li>
+        </ul>
+
+        <div id="empty-state" class="empty-state hidden">
+            No departures in sight.
+        </div>
+    </main>
+
+    <footer class="statusbar">
+        <span id="source-badge" class="source-badge source-live">LIVE</span>
+        <span id="warnings" class="warnings" style="color: var(--fg-dim);">UPDATED 14:42:44</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
